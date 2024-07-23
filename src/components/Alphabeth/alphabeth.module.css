@@ -1,0 +1,19 @@
+.alphabethLetter {
+	border: 2px solid;
+	padding: 4px;
+	font-size: 30px;
+	cursor: pointer;
+	width: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
+	transition: all 0.35s ease;
+}
+
+.alphabethLetter:hover {
+	transform: scale(1.1);
+	border: none;
+	background-color: black;
+	color: white;
+}
