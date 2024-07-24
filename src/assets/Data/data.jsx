@@ -1,204 +1,109 @@
 const arrayObj = [
-    {
-        id: crypto.randomUUID(),
-        category: 'Proverbi',
-        frase: 'Chi va piano va sano e va lontano.'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Citazioni',
-        frase: 'La vita è ciò che accade mentre sei impegnato a fare altri piani. - John Lennon'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Modi di dire',
-        frase: 'Acqua in bocca.'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Detti',
-        frase: 'La fortuna aiuta gli audaci.'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Aforismi',
-        frase: 'Il futuro appartiene a coloro che credono nella bellezza dei propri sogni. - Eleanor Roosevelt'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Proverbi',
-        frase: 'Non c\'è rosa senza spine.'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Citazioni',
-        frase: 'L\'unico limite alle nostre realizzazioni di domani saranno i nostri dubbi di oggi. - Franklin D. Roosevelt'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Modi di dire',
-        frase: 'Chi dorme non piglia pesci.'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Detti',
-        frase: 'Chi trova un amico trova un tesoro.'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Aforismi',
-        frase: 'Il segreto per andare avanti è iniziare. - Mark Twain'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Proverbi',
-        frase: 'Chi va piano va sano e va lontano.'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Citazioni',
-        frase: 'La vita è ciò che accade mentre sei impegnato a fare altri piani. - John Lennon'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Modi di dire',
-        frase: 'Acqua in bocca.'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Detti',
-        frase: 'La fortuna aiuta gli audaci.'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Aforismi',
-        frase: 'Il futuro appartiene a coloro che credono nella bellezza dei propri sogni. - Eleanor Roosevelt'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Proverbi',
-        frase: 'Non c\'è rosa senza spine.'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Citazioni',
-        frase: 'L\'unico limite alle nostre realizzazioni di domani saranno i nostri dubbi di oggi. - Franklin D. Roosevelt'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Modi di dire',
-        frase: 'Chi dorme non piglia pesci.'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Detti',
-        frase: 'Chi trova un amico trova un tesoro.'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Aforismi',
-        frase: 'Il segreto per andare avanti è iniziare. - Mark Twain'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Proverbi',
-        frase: 'Chi va piano va sano e va lontano.'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Citazioni',
-        frase: 'La vita è ciò che accade mentre sei impegnato a fare altri piani. - John Lennon'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Modi di dire',
-        frase: 'Acqua in bocca.'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Detti',
-        frase: 'La fortuna aiuta gli audaci.'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Aforismi',
-        frase: 'Il futuro appartiene a coloro che credono nella bellezza dei propri sogni. - Eleanor Roosevelt'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Proverbi',
-        frase: 'Non c\'è rosa senza spine.'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Citazioni',
-        frase: 'L\'unico limite alle nostre realizzazioni di domani saranno i nostri dubbi di oggi. - Franklin D. Roosevelt'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Modi di dire',
-        frase: 'Chi dorme non piglia pesci.'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Detti',
-        frase: 'Chi trova un amico trova un tesoro.'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Aforismi',
-        frase: 'Il segreto per andare avanti è iniziare. - Mark Twain'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Proverbi',
-        frase: 'Chi va piano va sano e va lontano.'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Citazioni',
-        frase: 'La vita è ciò che accade mentre sei impegnato a fare altri piani. - John Lennon'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Modi di dire',
-        frase: 'Acqua in bocca.'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Detti',
-        frase: 'La fortuna aiuta gli audaci.'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Aforismi',
-        frase: 'Il futuro appartiene a coloro che credono nella bellezza dei propri sogni. - Eleanor Roosevelt'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Proverbi',
-        frase: 'Non c\'è rosa senza spine.'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Citazioni',
-        frase: 'L\'unico limite alle nostre realizzazioni di domani saranno i nostri dubbi di oggi. - Franklin D. Roosevelt'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Modi di dire',
-        frase: 'Chi dorme non piglia pesci.'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Detti',
-        frase: 'Chi trova un amico trova un tesoro.'
-    },
-    {
-        id: crypto.randomUUID(),
-        category: 'Aforismi',
-        frase: 'Il segreto per andare avanti è iniziare. - Mark Twain'
-    }
+    { id: crypto.randomUUID(), category: 'Proverbi', frase: 'Chi va piano va sano e va lontano.' },
+    { id: crypto.randomUUID(), category: 'Citazioni', frase: 'La vita è ciò che accade mentre sei impegnato a fare altri piani. - John Lennon' },
+    { id: crypto.randomUUID(), category: 'Modi di dire', frase: 'Acqua in bocca.' },
+    { id: crypto.randomUUID(), category: 'Detti', frase: 'La fortuna aiuta gli audaci.' },
+    { id: crypto.randomUUID(), category: 'Aforismi', frase: 'Il futuro appartiene a coloro che credono nella bellezza dei propri sogni. - Eleanor Roosevelt' },
+    { id: crypto.randomUUID(), category: 'Proverbi', frase: 'Non c\'è rosa senza spine.' },
+    { id: crypto.randomUUID(), category: 'Citazioni', frase: 'L\'unico limite alle nostre realizzazioni di domani saranno i nostri dubbi di oggi. - Franklin D. Roosevelt' },
+    { id: crypto.randomUUID(), category: 'Modi di dire', frase: 'Chi dorme non piglia pesci.' },
+    { id: crypto.randomUUID(), category: 'Detti', frase: 'Chi trova un amico trova un tesoro.' },
+    { id: crypto.randomUUID(), category: 'Aforismi', frase: 'Il segreto per andare avanti è iniziare. - Mark Twain' },
+    { id: crypto.randomUUID(), category: 'Proverbi', frase: 'La gatta frettolosa fece i gattini ciechi.' },
+    { id: crypto.randomUUID(), category: 'Citazioni', frase: 'La mente è come un paracadute: funziona solo se si apre. - Albert Einstein' },
+    { id: crypto.randomUUID(), category: 'Modi di dire', frase: 'Chi non risica non rosica.' },
+    { id: crypto.randomUUID(), category: 'Detti', frase: 'Chi ben comincia è a metà dell\'opera.' },
+    { id: crypto.randomUUID(), category: 'Aforismi', frase: 'La vita non è trovare se stessi, è creare se stessi. - George Bernard Shaw' },
+    { id: crypto.randomUUID(), category: 'Proverbi', frase: 'Il cane che abbaia non morde.' },
+    { id: crypto.randomUUID(), category: 'Citazioni', frase: 'La vita è breve, ma larga. - Ralph Waldo Emerson' },
+    { id: crypto.randomUUID(), category: 'Modi di dire', frase: 'Chi ha tempo non aspetti tempo.' },
+    { id: crypto.randomUUID(), category: 'Detti', frase: 'Meglio tardi che mai.' },
+    { id: crypto.randomUUID(), category: 'Aforismi', frase: 'La felicità non è qualcosa di pronto. Viene dalle tue azioni. - Dalai Lama' },
+    { id: crypto.randomUUID(), category: 'Proverbi', frase: 'Chi trova un amico trova un tesoro.' },
+    { id: crypto.randomUUID(), category: 'Citazioni', frase: 'Se non ora, quando? - Hillel' },
+    { id: crypto.randomUUID(), category: 'Modi di dire', frase: 'Chi fa da sé fa per tre.' },
+    { id: crypto.randomUUID(), category: 'Detti', frase: 'Chi va con lo zoppo impara a zoppicare.' },
+    { id: crypto.randomUUID(), category: 'Aforismi', frase: 'La vita è un viaggio, non una destinazione. - Ralph Waldo Emerson' },
+    { id: crypto.randomUUID(), category: 'Proverbi', frase: 'Lontano dagli occhi, lontano dal cuore.' },
+    { id: crypto.randomUUID(), category: 'Citazioni', frase: 'Non è mai troppo tardi per essere ciò che avresti potuto essere. - George Eliot' },
+    { id: crypto.randomUUID(), category: 'Modi di dire', frase: 'Chi ben comincia è a metà dell\'opera.' },
+    { id: crypto.randomUUID(), category: 'Detti', frase: 'Nessuna notizia, buona notizia.' },
+    { id: crypto.randomUUID(), category: 'Aforismi', frase: 'Non è la dimensione della vita che conta, ma come la vivi. - Unknown' },
+    { id: crypto.randomUUID(), category: 'Proverbi', frase: 'Rosso di sera, bel tempo si spera.' },
+    { id: crypto.randomUUID(), category: 'Citazioni', frase: 'Non è la vita che conta, ma il coraggio che metti in essa. - Unknown' },
+    { id: crypto.randomUUID(), category: 'Modi di dire', frase: 'A caval donato non si guarda in bocca.' },
+    { id: crypto.randomUUID(), category: 'Detti', frase: 'Tra il dire e il fare c\'è di mezzo il mare.' },
+    { id: crypto.randomUUID(), category: 'Aforismi', frase: 'La vera misura di un uomo non si vede nei momenti di comodità e convenienza, ma in quelli di sfida e controversia. - Martin Luther King Jr.' },
+    { id: crypto.randomUUID(), category: 'Proverbi', frase: 'Il diavolo fa le pentole ma non i coperchi.' },
+    { id: crypto.randomUUID(), category: 'Citazioni', frase: 'Il futuro appartiene a coloro che credono nella bellezza dei propri sogni. - Eleanor Roosevelt' },
+    { id: crypto.randomUUID(), category: 'Modi di dire', frase: 'Chi ha tempo non aspetti tempo.' },
+    { id: crypto.randomUUID(), category: 'Detti', frase: 'Chi trova un amico trova un tesoro.' },
+    { id: crypto.randomUUID(), category: 'Aforismi', frase: 'Il segreto per andare avanti è iniziare. - Mark Twain' },
+    { id: crypto.randomUUID(), category: 'Proverbi', frase: 'Chi va piano va sano e va lontano.' },
+    { id: crypto.randomUUID(), category: 'Citazioni', frase: 'La vita è ciò che accade mentre sei impegnato a fare altri piani. - John Lennon' },
+    { id: crypto.randomUUID(), category: 'Modi di dire', frase: 'Acqua in bocca.' },
+    { id: crypto.randomUUID(), category: 'Detti', frase: 'La fortuna aiuta gli audaci.' },
+    { id: crypto.randomUUID(), category: 'Aforismi', frase: 'Non esiste una strada verso la felicità. La felicità è la strada. - Thich Nhat Hanh' },
+    { id: crypto.randomUUID(), category: 'Proverbi', frase: 'Non dire gatto se non ce l\'hai nel sacco.' },
+    { id: crypto.randomUUID(), category: 'Citazioni', frase: 'Il miglior modo per prevedere il futuro è crearlo. - Peter Drucker' },
+    { id: crypto.randomUUID(), category: 'Modi di dire', frase: 'Chi fa da sé fa per tre.' },
+    { id: crypto.randomUUID(), category: 'Detti', frase: 'Meglio un uovo oggi che una gallina domani.' },
+    { id: crypto.randomUUID(), category: 'Aforismi', frase: 'Il successo non è finale, il fallimento non è fatale: è il coraggio di continuare che conta. - Winston Churchill' },
+    { id: crypto.randomUUID(), category: 'Proverbi', frase: 'La calma è la virtù dei forti.' },
+    { id: crypto.randomUUID(), category: 'Citazioni', frase: 'Il solo vero errore è quello da cui non impariamo nulla. - Henry Ford' },
+    { id: crypto.randomUUID(), category: 'Modi di dire', frase: 'Una mela al giorno toglie il medico di torno.' },
+    { id: crypto.randomUUID(), category: 'Detti', frase: 'Dio li fa e poi li accoppia.' },
+    { id: crypto.randomUUID(), category: 'Aforismi', frase: 'Fai ciò che puoi, con quello che hai, dove sei. - Theodore Roosevelt' },
+    { id: crypto.randomUUID(), category: 'Proverbi', frase: 'Chi troppo vuole nulla stringe.' },
+    { id: crypto.randomUUID(), category: 'Citazioni', frase: 'La vita è un 10% cosa ti accade e il 90% come reagisci. - Charles R. Swindoll' },
+    { id: crypto.randomUUID(), category: 'Modi di dire', frase: 'Meglio soli che male accompagnati.' },
+    { id: crypto.randomUUID(), category: 'Detti', frase: 'L\'abito non fa il monaco.' },
+    { id: crypto.randomUUID(), category: 'Aforismi', frase: 'La fortuna non esiste: esiste il momento in cui il talento incontra l\'opportunità. - Seneca' },
+    { id: crypto.randomUUID(), category: 'Proverbi', frase: 'Lontano dagli occhi, lontano dal cuore.' },
+    { id: crypto.randomUUID(), category: 'Citazioni', frase: 'Non puoi tornare indietro e cambiare l\'inizio, ma puoi iniziare dove sei e cambiare il finale. - C.S. Lewis' },
+    { id: crypto.randomUUID(), category: 'Modi di dire', frase: 'Prevenire è meglio che curare.' },
+    { id: crypto.randomUUID(), category: 'Detti', frase: 'Chi ben comincia è a metà dell\'opera.' },
+    { id: crypto.randomUUID(), category: 'Aforismi', frase: 'La più grande gloria nella vita non è non cadere mai, ma rialzarsi ogni volta che cadiamo. - Nelson Mandela' },
+    { id: crypto.randomUUID(), category: 'Proverbi', frase: 'Occhio non vede, cuore non duole.' },
+    { id: crypto.randomUUID(), category: 'Citazioni', frase: 'Le cose migliori e più belle del mondo non possono essere viste e nemmeno toccate. Devono essere sentite con il cuore. - Helen Keller' },
+    { id: crypto.randomUUID(), category: 'Modi di dire', frase: 'Ogni lasciata è persa.' },
+    { id: crypto.randomUUID(), category: 'Detti', frase: 'Chi non risica non rosica.' },
+    { id: crypto.randomUUID(), category: 'Aforismi', frase: 'La vita è quello che ti succede mentre sei impegnato a fare altri progetti. - Allen Saunders' },
+    { id: crypto.randomUUID(), category: 'Proverbi', frase: 'Chi non risica non rosica.' },
+    { id: crypto.randomUUID(), category: 'Citazioni', frase: 'La mente è come un paracadute: funziona solo se si apre. - Albert Einstein' },
+    { id: crypto.randomUUID(), category: 'Modi di dire', frase: 'Chi ha tempo non aspetti tempo.' },
+    { id: crypto.randomUUID(), category: 'Detti', frase: 'Meglio tardi che mai.' },
+    { id: crypto.randomUUID(), category: 'Aforismi', frase: 'La felicità non è qualcosa di pronto. Viene dalle tue azioni. - Dalai Lama' },
+    { id: crypto.randomUUID(), category: 'Proverbi', frase: 'Il cane che abbaia non morde.' },
+    { id: crypto.randomUUID(), category: 'Citazioni', frase: 'La vita è breve, ma larga. - Ralph Waldo Emerson' },
+    { id: crypto.randomUUID(), category: 'Modi di dire', frase: 'Chi ben comincia è a metà dell\'opera.' },
+    { id: crypto.randomUUID(), category: 'Detti', frase: 'Nessuna notizia, buona notizia.' },
+    { id: crypto.randomUUID(), category: 'Aforismi', frase: 'Non è la dimensione della vita che conta, ma come la vivi. - Unknown' },
+    { id: crypto.randomUUID(), category: 'Proverbi', frase: 'Rosso di sera, bel tempo si spera.' },
+    { id: crypto.randomUUID(), category: 'Citazioni', frase: 'Non è la vita che conta, ma il coraggio che metti in essa. - Unknown' },
+    { id: crypto.randomUUID(), category: 'Modi di dire', frase: 'A caval donato non si guarda in bocca.' },
+    { id: crypto.randomUUID(), category: 'Detti', frase: 'Tra il dire e il fare c\'è di mezzo il mare.' },
+    { id: crypto.randomUUID(), category: 'Aforismi', frase: 'La vera misura di un uomo non si vede nei momenti di comodità e convenienza, ma in quelli di sfida e controversia. - Martin Luther King Jr.' },
+    { id: crypto.randomUUID(), category: 'Proverbi', frase: 'Il diavolo fa le pentole ma non i coperchi.' },
+    { id: crypto.randomUUID(), category: 'Citazioni', frase: 'Il futuro appartiene a coloro che credono nella bellezza dei propri sogni. - Eleanor Roosevelt' },
+    { id: crypto.randomUUID(), category: 'Modi di dire', frase: 'Chi ha tempo non aspetti tempo.' },
+    { id: crypto.randomUUID(), category: 'Detti', frase: 'Chi trova un amico trova un tesoro.' },
+    { id: crypto.randomUUID(), category: 'Aforismi', frase: 'Il segreto per andare avanti è iniziare. - Mark Twain' },
+    { id: crypto.randomUUID(), category: 'Proverbi', frase: 'Chi va piano va sano e va lontano.' },
+    { id: crypto.randomUUID(), category: 'Citazioni', frase: 'La vita è ciò che accade mentre sei impegnato a fare altri piani. - John Lennon' },
+    { id: crypto.randomUUID(), category: 'Modi di dire', frase: 'Acqua in bocca.' },
+    { id: crypto.randomUUID(), category: 'Detti', frase: 'La fortuna aiuta gli audaci.' },
+    { id: crypto.randomUUID(), category: 'Aforismi', frase: 'Non esiste una strada verso la felicità. La felicità è la strada. - Thich Nhat Hanh' },
+    { id: crypto.randomUUID(), category: 'Proverbi', frase: 'Non dire gatto se non ce l\'hai nel sacco.' },
+    { id: crypto.randomUUID(), category: 'Citazioni', frase: 'Il miglior modo per prevedere il futuro è crearlo. - Peter Drucker' },
+    { id: crypto.randomUUID(), category: 'Modi di dire', frase: 'Chi fa da sé fa per tre.' },
+    { id: crypto.randomUUID(), category: 'Detti', frase: 'Meglio un uovo oggi che una gallina domani.' },
+    { id: crypto.randomUUID(), category: 'Aforismi', frase: 'Il successo non è finale, il fallimento non è fatale: è il coraggio di continuare che conta. - Winston Churchill' },
+    { id: crypto.randomUUID(), category: 'Proverbi', frase: 'La calma è la virtù dei forti.' },
+    { id: crypto.randomUUID(), category: 'Citazioni', frase: 'Il solo vero errore è quello da cui non impariamo nulla. - Henry Ford' },
+    { id: crypto.randomUUID(), category: 'Modi di dire', frase: 'Una mela al giorno toglie il medico di torno.' },
+    { id: crypto.randomUUID(), category: 'Detti', frase: 'Dio li fa e poi li accoppia.' },
+    { id: crypto.randomUUID(), category: 'Aforismi', frase: 'Fai ciò che puoi, con quello che hai, dove sei. - Theodore Roosevelt' }
 ];
 
 const arrayCategory = ['Proverbi', 'Citazioni', 'Modi di dire', 'Detti', 'Aforismi']

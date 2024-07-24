@@ -12,10 +12,11 @@ const reset = [];
 function App() {
   const [selectValue, setSelectValue] = useState('');
   const [phrase, setPhrase] = useState(reset);
+  const [alphabethArray, setAlphabethArray] = useState(reset);
   const [count, setCount] = useState(3);
-  const [score, setScore] = useState(0)
-  const [modal, setModal] = useState(false)
-  const [lose, setLose] = useState(false)
+  const [score, setScore] = useState(0);
+  const [modal, setModal] = useState(false);
+  const [lose, setLose] = useState(false);
 
   function handleChange(e) {
     const value = e.target.value;
@@ -25,11 +26,11 @@ function App() {
   function randomPhrase() {
     const filteredArray = arrayObj.filter(element => element.category === selectValue);
     if (filteredArray.length === 0) return;
-    
+
     const randomIndex = Math.floor(Math.random() * filteredArray.length);
     const phraseSelected = filteredArray[randomIndex];
     const phraseInArray = phraseSelected.frase.split('').filter(carattere => /[a-zA-ZÀ-ÿ\s']/u.test(carattere));
-    
+
     const newPhrase = phraseInArray.map((element, index) => ({
       id: index,
       value: element,
@@ -39,8 +40,17 @@ function App() {
     return newPhrase;
   }
 
+  function mapAlphabeth() {
+    const alphabethArray = alphabeth.map(element => ({
+      letter: element,
+      isClick: false
+    }));
+    setAlphabethArray(alphabethArray);
+  }
+
   useEffect(() => {
     if (!selectValue) return;
+    mapAlphabeth();
     setPhrase(reset);
     setPhrase(randomPhrase());
   }, [selectValue]);
@@ -52,12 +62,15 @@ function App() {
   }
 
   function handleClick(e) {
-    const alphabetLetter = e.target.innerHTML.toLowerCase();
+    const trigger = e.target.textContent;
+    const findLetter = alphabethArray.map(element => element.letter === trigger ? { ...element, isClick: true } : element);
+    setAlphabethArray(findLetter);
 
-    const updateCount = phrase.find((element => (alphabetLetter === element.value.toLowerCase() && element.bgBlack === true)))
+    const alphabetLetter = e.target.innerHTML.toLowerCase();
+    const updateCount = phrase.find(element => alphabetLetter === element.value.toLowerCase() && element.bgBlack === true);
     if (!updateCount) {
       if (count === 0) return;
-      setCount(count - 1)
+      setCount(count - 1);
     }
 
     const updatedPhrase = phrase.map(element => 
@@ -65,28 +78,29 @@ function App() {
       ? { ...element, isClick: true, bgBlack: false }
       : element
     );
-    
+
     setPhrase(updatedPhrase);
   }
 
   useEffect(() => {
     if (count === 0) {
-      setLose(true)
+      setLose(true);
     }
-  }, [count])
+  }, [count]);
 
   useEffect(() => {
-    const score = phrase.filter(element => (element.bgBlack === true));
+    const score = phrase.filter(element => element.bgBlack === true);
     const allValuesAreSpaces = score.every(element => element.value === ' ');
     if (selectValue && allValuesAreSpaces) {
-      setScore(prevScore => prevScore + 1)
+      mapAlphabeth()
+      setScore(prevScore => prevScore + 1);
       setPhrase(randomPhrase());
-      setModal(true)
+      setModal(true);
       setTimeout(() => {
-        setModal(false)
-      }, 2000)
+        setModal(false);
+      }, 2000);
     }
-  }, [phrase])
+  }, [phrase]);
 
   function handleReset() {
     window.location.reload();
@@ -114,30 +128,40 @@ function App() {
         </Select>
         <h1>{selectValue}</h1>
         <div className={styles.containerPhrases}>
-        {selectValue ?
-          <div className={styles.containerLetters}>
-            {selectValue ? phrase.map(letter => (
-              <Letter 
-                isClicked={letter.isClick} 
-                key={letter.id}
-                classLetter={/[a-zA-Z]/.test(letter.value) ? letter.bgBlack ? styles.opacity : '' : ''} 
-                bgWhite={styles.noOpacity} 
-                letter={letter.value} 
-              />
-            )) : ''}
-          </div> : <div className={styles.initial}><h2>Seleziona una categoria</h2><img className={styles.imgCategory} src="/img/infographic-elements_16335480.png" alt="Icona category" /></div>
-        }
+          {selectValue ? (
+            <div className={styles.containerLetters}>
+              {phrase.map(letter => (
+                <Letter 
+                  isClicked={letter.isClick} 
+                  key={letter.id}
+                  classLetter={/[a-zA-Z]/.test(letter.value) ? letter.bgBlack ? styles.opacity : '' : ''} 
+                  bgWhite={styles.noOpacity} 
+                  letter={letter.value} 
+                />
+              ))}
+            </div>
+          ) : (
+            <div className={styles.initial}>
+              <h2>Seleziona una categoria</h2>
+              <img className={styles.imgCategory} src="/img/infographic-elements_16335480.png" alt="Icona category" />
+            </div>
+          )}
         </div>
         {selectValue && (
           <div className={styles.alphabeth}>
-            {alphabeth.map(letter => (
-              <Alphabeth onClick={handleClick} key={letter} letter={letter} />
+            {alphabethArray.map((item, index) => (
+              <Alphabeth 
+                key={index} 
+                letter={item.letter} 
+                isClick={item.isClick} 
+                onClick={handleClick} 
+              />
             ))}
           </div>
         )}
       </div>
       <Modal isOpen={modal}><h1>🎆 Congratulazioni 🎆</h1></Modal>
-      <Modal isOpen={lose}><h1>🆘 Hai perso! 🆘</h1><button className={styles.button} onClick={() => handleReset()}>Riprova</button></Modal>
+      <Modal isOpen={lose}><h1>🆘 Hai perso! 🆘</h1><button className={styles.button} onClick={handleReset}>Riprova</button></Modal>
     </>
   );
 }

@@ -18,6 +18,20 @@
 	color: white;
 }
 
+.bgClick {
+	background-color: #6499E9;
+	color: white;
+	border: none;
+	transition: all 0.35s ease;
+}
+
+.bgClick:hover {
+	transform: scale(1);
+	background-color: #6499E9;
+	color: white;
+	border: none;
+}
+
 @media screen and (max-width: 767px) {
 	.alphabethLetter {
 		width: 30px;

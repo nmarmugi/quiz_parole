@@ -1,9 +1,12 @@
-import styles from './alphabeth.module.css'
+import styles from './alphabeth.module.css';
+import classNames from 'classnames';
 
-function Alphabeth({letter, onClick}) {
+function Alphabeth({ letter, onClick, isClick }) {
 	return (
-		<div onClick={onClick} className={styles.alphabethLetter}>{letter}</div>
-	)
+		<div onClick={onClick} className={classNames(styles.alphabethLetter, { [styles.bgClick]: isClick })}>
+			{letter}
+		</div>
+	);
 }
 
-export default Alphabeth
+export default Alphabeth;
