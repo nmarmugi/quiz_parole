@@ -115,6 +115,8 @@ function App() {
         </div>
         <div className={styles.vite}>
           <h2>Vite:</h2>
+          {count < 2 && <img className={styles.icon} src="/img/0-life.png" alt="Icona cuore" />}
+          {count < 3 && <img className={styles.icon} src="/img/0-life.png" alt="Icona cuore" />}
           {count === 0 && <img className={styles.icon} src="/img/0-life.png" alt="Icona cuore" />}
           {count > 0 && <img className={styles.icon} src="/img/daily-health-app_7102731.png" alt="Icona cuore" />}
           {count > 1 && <img className={styles.icon} src="/img/daily-health-app_7102731.png" alt="Icona cuore" />}
